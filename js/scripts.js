@@ -20,7 +20,8 @@ button.addEventListener('click', function (event) {
     event.preventDefault();
 
     const selectedRating = document.querySelector('.rating.selected');
-    const selectedRatingValue = selectedRating.getAttribute('data-val');
+    const selectedRatingValue =
+        selectedRating !== null ? selectedRating.getAttribute('data-val') : 0;
 
     if (selectedRating === null) {
         alert('Please select a rating before clicking submit');
